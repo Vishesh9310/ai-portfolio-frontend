@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #c2a7e6;
+  --text: #111111;
+  --footer-bg: #a083c6;
+  --footer-text: black;
+}
+
+[data-theme="dark"] {
+  --bg: #0f172a;
+  --text: #e5e7eb;
+  --footer-bg: #020617;
+  --footer-text: #E2E8F0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.3s ease;
+}
+
+.card{
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.3s ease;
+}
+
+.footer{
+  background: var(--footer-bg);
+  color: var(--footer-text);
+  transition: 0.3s ease;
+}
+
+
+@keyframes fadeInUp {
+  0%{
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up{
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.delay-200{
+  animation-delay: 0.2s;
+}
+
+.delay-400{
+  animation-delay: 0.4s;
+}
+
+

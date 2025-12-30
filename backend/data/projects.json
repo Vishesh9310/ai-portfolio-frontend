@@ -1,0 +1,151 @@
+[
+  {
+    "id": 10,
+    "title": "Chess Realtime Game",
+    "img": { "id": 101, "src": "/uploads/projects/chessgame/1.png", "alt": "Main Image" },
+    "imageList": [
+      { "id": 1, "src": "/uploads/projects/chessgame/1.png", "alt": "Game Board" },
+      { "id": 2, "src": "/uploads/projects/chessgame/2.png", "alt": "Dashboard" }
+    ],
+    "description":
+      "Real-time multiplayer chess application with live gameplay, spectators, and server-side move validation using WebSockets.",
+    "tech": ["Node.js", "Express.js", "Socket.io", "EJS", "TailwindCSS"],
+    "github": "https://github.com/Vishesh9310/chess-realtime-game",
+    "live": "https://github.com/Vishesh9310/chess-realtime-game"
+  },
+
+  {
+    "id": 9,
+    "title": "Growth Board",
+    "img": { "id": 101, "src": "/uploads/projects/growthboard/dashboard.png", "alt": "Main Image" },
+    "imageList": [
+      { "id": 1, "src": "/uploads/projects/growthboard/achievement.png", "alt": "Home Page" },
+      { "id": 2, "src": "/uploads/projects/growthboard/dashboard.png", "alt": "Login Page" },
+      { "id": 1, "src": "/uploads/projects/growthboard/dashboard2.png", "alt": "Home Page" },
+      { "id": 2, "src": "/uploads/projects/growthboard/login.png", "alt": "Login Page" },
+      { "id": 1, "src": "/uploads/projects/growthboard/main.png", "alt": "Home Page" },
+      { "id": 2, "src": "/uploads/projects/growthboard/profile.png", "alt": "Login Page" },
+      { "id": 1, "src": "/uploads/projects/growthboard/projects.png", "alt": "Home Page" },
+      { "id": 2, "src": "/uploads/projects/growthboard/skills.png", "alt": "Login Page" }
+    ],
+    "description":
+      "MERN-based personal growth tracker to manage skills, goals, achievements, and projects in one dashboard.",
+    "tech": ["React", "Node.js", "MongoDB", "TypeScript", "TailwindCSS"],
+    "github": "https://github.com/Vishesh9310/GrowthBoardFrontend",
+    "live": "https://growthboard.netlify.app/"
+  },
+
+  {
+    "id": 8,
+    "title": "Coos Library",
+    "img": { "id": 101, "src": "/uploads/projects/cooslibrary/homepage.png", "alt": "Main Image" },
+    "imageList": [
+      { "id": 1, "src": "/uploads/projects/cooslibrary/aboutpage.png", "alt": "About" },
+      { "id": 2, "src": "/uploads/projects/cooslibrary/helppage.png", "alt": "Help" },
+      { "id": 3, "src": "/uploads/projects/cooslibrary/homepage.png", "alt": "Home" },
+      { "id": 4, "src": "/uploads/projects/cooslibrary/loginpage.png", "alt": "Help" },
+      { "id": 5, "src": "/uploads/projects/cooslibrary/signuppage.png", "alt": "Home" }
+    ],
+    "description":
+      "Full-stack digital library platform with authentication, reading progress tracking, and modern UI.",
+    "tech": ["React", "Node.js", "Express", "MongoDB", "TailwindCSS"],
+    "github": "https://github.com/Vishesh9310/CoosLibraryFrontend",
+    "live": "https://github.com/Vishesh9310/CoosLibraryFrontend"
+  },
+
+  {
+    "id": 7,
+    "title": "Notes App (EJS)",
+    "img": { "id": 101, "src": "/uploads/projects/image.png", "alt": "Main Image" },
+    "imageList": [],
+    "description":
+      "Server-rendered notes application supporting CRUD operations using Express, EJS, and MongoDB.",
+    "tech": ["Node.js", "Express.js", "EJS", "MongoDB"],
+    "github": "https://github.com/Vishesh9310/NotesApp-ejs-node-express-mongoose-",
+    "live": "https://github.com/Vishesh9310/NotesApp-ejs-node-express-mongoose-"
+  },
+
+  {
+    "id": 6,
+    "title": "Emart",
+    "img": { "id": 101, "src": "/uploads/projects/image.png", "alt": "Main Image" },
+    "imageList": [],
+    "description":
+      "Role-based e-commerce web app with authentication, admin product control, and session handling.",
+    "tech": ["Node.js", "Express.js", "MongoDB", "EJS", "CSS"],
+    "github": "https://github.com/Vishesh9310/Emart",
+    "live": "https://github.com/Vishesh9310/Emart"
+  },
+
+  {
+    "id": 5,
+    "title": "RESTful Bookstore API",
+    "img": { "id": 101, "src": "/uploads/projects/image.png", "alt": "Main Image" },
+    "imageList": [],
+    "description":
+      "Spring Boot REST API for managing books and authors with CRUD, pagination, and Swagger docs.",
+    "tech": ["Java", "Spring Boot", "MongoDB"],
+    "github": "https://github.com/Vishesh9310/RESTful-Bookstore-API-Java",
+    "live": "https://github.com/Vishesh9310/RESTful-Bookstore-API-Java"
+  },
+
+  {
+    "id": 4,
+    "title": "Library Management System",
+    "img": { "id": 101, "src": "/uploads/projects/image.png", "alt": "Main Image" },
+    "imageList": [],
+    "description":
+      "Java-based command-line application demonstrating core OOP concepts for library operations.",
+    "tech": ["Java"],
+    "github": "https://github.com/Vishesh9310/Library-Management-System-Using-OOP-",
+    "live": "https://github.com/Vishesh9310/Library-Management-System-Using-OOP-"
+  },
+
+  {
+    "id": 3,
+    "title": "KeepNotes",
+    "img": { "id": 101, "src": "/uploads/projects/keepnotes/Homepage.png", "alt": "Main Image" },
+    "imageList": [
+      { "id": 1, "src": "/uploads/projects/keepnotes/Homepage.png", "alt": "Notes List" },
+      { "id": 2, "src": "/uploads/projects/keepnotes/Pastepage.png", "alt": "View Note" },
+      { "id": 3, "src": "/uploads/projects/keepnotes/viewpage.png", "alt": "View Note" }
+    ],
+    "description":
+      "Simple React note-saving application with Redux and local storage.",
+    "tech": ["React", "Redux", "CSS"],
+    "github": "https://github.com/Vishesh9310/KeepNotes",
+    "live": "https://github.com/Vishesh9310/KeepNotes"
+  },
+
+  {
+    "id": 2,
+    "title": "Sarthi Hospital",
+    "img": { "id": 101, "src": "/uploads/projects/sarthihospital/home.png", "alt": "Main Image" },
+    "imageList": [
+      { "id": 1, "src": "/uploads/projects/sarthihospital/about.png", "alt": "About Page" },
+      { "id": 2, "src": "/uploads/projects/sarthihospital/contactus.png", "alt": "Contact Page" },
+      { "id": 1, "src": "/uploads/projects/sarthihospital/DashboardHome.png", "alt": "About Page" },
+      { "id": 2, "src": "/uploads/projects/sarthihospital/gallery.png", "alt": "Contact Page" },
+      { "id": 1, "src": "/uploads/projects/sarthihospital/home.png", "alt": "About Page" },
+      { "id": 1, "src": "/uploads/projects/sarthihospital/login.png", "alt": "About Page" },
+      { "id": 2, "src": "/uploads/projects/sarthihospital/signup.png", "alt": "Contact Page" }
+    ],
+    "description":
+      "Hospital management frontend with appointment scheduling and patient UI.",
+    "tech": ["React", "TailwindCSS"],
+    "github": "https://github.com/Vishesh9310/Sarthi2.0",
+    "live": "https://github.com/Vishesh9310/Sarthi2.0"
+  },
+
+  {
+    "id": 1,
+    "title": "Calculator",
+    "img": { "id": 101, "src": "/uploads/projects/image.png", "alt": "Main Image" },
+    "imageList": [],
+    "description":
+      "Responsive calculator built using HTML, CSS, and JavaScript with full arithmetic support.",
+    "tech": ["HTML", "CSS", "JavaScript"],
+    "github": "https://github.com/Vishesh9310/CodeAlpha_Calculator",
+    "live": "https://github.com/Vishesh9310/CodeAlpha_Calculator"
+  }
+]
