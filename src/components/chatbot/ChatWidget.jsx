@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import ScrollToTop from '../common/ScrollToTop';
 
 const ChatWidget = () => {
   const [open, setOpen] = useState(false);
@@ -66,6 +67,7 @@ const ChatWidget = () => {
           </div>
         </div>
       )}
+      <ScrollToTop/>
     </>
   );
 };

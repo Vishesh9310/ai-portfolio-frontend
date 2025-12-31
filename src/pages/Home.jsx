@@ -7,6 +7,7 @@ import Projects from '../sections/Projects'
 import Experience from '../sections/Experience'
 import ScrollToTop from '../components/common/ScrollToTop'
 import Certificates from '../sections/Certificates'
+import WhyHireMe from '../sections/WhyHireMe'
 
 const Home = () => {
     return (
@@ -17,6 +18,7 @@ const Home = () => {
             <Certificates/>
             <Skills />
             <Experience/>
+            <WhyHireMe/>
             <ScrollToTop/>
         </div>
     )

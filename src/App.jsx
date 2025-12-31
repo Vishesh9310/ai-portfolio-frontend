@@ -6,8 +6,6 @@ import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import NotFound from './pages/NotFound'
 import Contact from './sections/Contact'
-import ChatWindow from './components/chatbot/ChatWindow'
-import ChatBubble from './components/chatbot/ChatBubble'
 import FullProject from './components/project/FullProject'
 import Thankyou from './pages/Thankyou'
 import FullCertificate from './components/certificate/FullCertificate'
@@ -34,17 +32,13 @@ const App = () => {
             <Route path='/certificates' element={<Certificates/>}/>
             <Route path='/certificates/:id' element={<FullCertificate />} />
             <Route path='/contact' element={<Contact />} />
-            <Route path='/chatbot' element={<ChatWindow />} />
             <Route path='/thankyou' element={<Thankyou/>}/>
             <Route path='*' element={<NotFound />} />
           </Routes>
         </main>
 
         <Footer />
-        {/* <ChatBubble />
-         */}
-         <ChatWidget />
-
+        <ChatWidget />
       </div>
     </BrowserRouter>
   )
