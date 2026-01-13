@@ -1,58 +1,122 @@
-import React, { useState } from 'react';
-import { IoSunny, IoMoon, IoMenu, IoClose } from 'react-icons/io5';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from "react";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
+import { IoSunny, IoMoon, IoMenu, IoClose } from "react-icons/io5";
 
 const Navbar = () => {
-    const [isDarkMode, setIsDarkMode] = useState(true);
-    const [isOpen, setIsOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
-    const toggleMenu = () => setIsOpen(!isOpen);
+  const location = useLocation();
+  const navigate = useNavigate();
 
-    const toggleTheme = () => {
-        const nextTheme = isDarkMode ? "light" : "dark";
-        document.documentElement.setAttribute("data-theme", nextTheme);
-        localStorage.setItem("theme", nextTheme);
-        setIsDarkMode(!isDarkMode);
-    };
+  // Load saved theme
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("theme") || "dark";
+    document.documentElement.setAttribute("data-theme", savedTheme);
+    setIsDarkMode(savedTheme === "dark");
+  }, []);
 
-    return (
-        <nav className='footer border-b border-slate-800 px-6 py-4 sticky top-0 w-full z-50'>
-            <div className='max-w-7xl mx-auto flex justify-between items-center'>
+  const toggleTheme = () => {
+    const nextTheme = isDarkMode ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", nextTheme);
+    localStorage.setItem("theme", nextTheme);
+    setIsDarkMode(!isDarkMode);
+  };
 
-                <Link to='/' className='text-lg font-bold tracking-tight text-white'>
-                    Vishesh
-                </Link>
+  const handleNavClick = (e, id) => {
+    e.preventDefault();
+    setIsOpen(false);
 
-                <div className='hidden md:flex items-center space-x-8'>
-                    <Link to='/' className='hover:text-white transition-colors'>Home</Link>
-                    <Link to='/project' className='hover:text-white transition-colors'>Project</Link>
-                    <Link to='/contact' className='hover:text-white transition-colors'>Contact Us</Link>
-                    <button onClick={toggleTheme} className="p-2 rounded-lg hover:bg-slate-800 transition-all">
-                        {isDarkMode ? <IoSunny size={22} className="text-yellow-400" /> : <IoMoon size={22} className="text-slate-400" />}
-                    </button>
-                </div>
+    if (location.pathname !== "/") {
+      navigate(`/#${id}`);
+      return;
+    }
 
-                {/* Mobile Icons*/}
-                <div className='flex items-center md:hidden space-x-4'>
-                    <button onClick={toggleTheme}>
-                        {isDarkMode ? <IoSunny size={22} className="text-yellow-400" /> : <IoMoon size={22} className="text-slate-400" />}
-                    </button>
-                    <button onClick={toggleMenu} className="text-slate-200 focus:outline-none">
-                        {isOpen ? <IoClose size={28} /> : <IoMenu size={28} />}
-                    </button>
-                </div>
-            </div>
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+  };
 
-            {/* Mobile Menu */}
-            {isOpen && (
-                <div className='md:hidden absolute top-full left-0 w-full bg-[#0f172a] border-b border-slate-800 py-4 px-6 flex flex-col space-y-4 shadow-xl'>
-                    <Link to='/' onClick={toggleMenu} className='hover:text-white py-2'>Home</Link>
-                    <Link to='/project' onClick={toggleMenu} className='hover:text-white py-2'>Project</Link>
-                    <Link to='/contact' onClick={toggleMenu} className='hover:text-white transition-colors'>Contact Us</Link>
-                </div>
+  return (
+    <nav className="fixed top-0 left-0 w-full bg-[#1b1b1b11] backdrop-blur z-50">
+      <div className="flex justify-between items-center h-14 px-[5%] shadow-md">
+        <NavLink to="/" className="orbitron font-bold italic text-2xl">
+          Vishesh.
+        </NavLink>
+
+        {/* Desktop */}
+        <ul className="hidden md:flex items-center gap-8">
+          {["about", "skills", "certifications", "educations"].map((section) => (
+            <li key={section}>
+              <a
+                href={`#${section}`}
+                onClick={(e) => handleNavClick(e, section)}
+                className="hover:text-violet-600"
+              >
+                {section.charAt(0).toUpperCase() + section.slice(1)}
+              </a>
+            </li>
+          ))}
+          <li>
+            <NavLink to="/achievement" className="hover:text-violet-600">
+              Achievements
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/project" className="hover:text-violet-600">
+              Projects
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/contact" className="hover:text-violet-600">
+              Contact
+            </NavLink>
+          </li>
+
+          <li>
+            <button
+              onClick={toggleTheme}
+              className="p-2 rounded-lg hover:bg-slate-800 transition"
+            >
+              {isDarkMode ? (
+                <IoSunny size={22} className="text-yellow-400" />
+              ) : (
+                <IoMoon size={22} className="text-slate-400" />
+              )}
+            </button>
+          </li>
+        </ul>
+
+        {/* Mobile Icons */}
+        <div className="flex items-center md:hidden gap-4">
+          <button onClick={toggleTheme}>
+            {isDarkMode ? (
+              <IoSunny size={22} className="text-yellow-400" />
+            ) : (
+              <IoMoon size={22} />
             )}
-        </nav>
-    );
-}
+          </button>
+
+          <button onClick={() => setIsOpen(!isOpen)}>
+            {isOpen ? <IoClose size={28} /> : <IoMenu size={28} />}
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="md:hidden  px-[10%] py-4 flex flex-col gap-4">
+          <NavLink to="/" onClick={() => setIsOpen(false)}>
+            Home
+          </NavLink>
+          <NavLink to="/project" onClick={() => setIsOpen(false)}>
+            Projects
+          </NavLink>
+          <NavLink to="/contact" onClick={() => setIsOpen(false)}>
+            Contact
+          </NavLink>
+        </div>
+      )}
+    </nav>
+  );
+};
 
 export default Navbar;

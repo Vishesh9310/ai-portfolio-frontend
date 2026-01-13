@@ -8,6 +8,7 @@ import Experience from '../sections/Experience'
 import ScrollToTop from '../components/common/ScrollToTop'
 import Certificates from '../sections/Certificates'
 import WhyHireMe from '../sections/WhyHireMe'
+import ProblemSol from '../sections/ProblemSol'
 
 const Home = () => {
     return (
@@ -15,9 +16,10 @@ const Home = () => {
             <Hero />
             <About />
             <Projects />
-            <Certificates/>
             <Skills />
+            <Certificates/>
             <Experience/>
+            <ProblemSol/>
             <WhyHireMe/>
             <ScrollToTop/>
         </div>

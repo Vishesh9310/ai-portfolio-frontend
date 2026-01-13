@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const WhyHireMe = () => {
     return (
-        <div className=" min-h-fit py-50 px-4">
+        <div className=" min-h-fit py-50 px-4 skills-body">
             <div className="max-w-5xl mx-auto">
 
                 {/* Header Section */}

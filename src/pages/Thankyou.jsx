@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import tku from '../assets/notfound/animation.webp';
+import thanku from '../assets/thankyou/thankyou.mp4';
 import { useNavigate } from 'react-router-dom';
 
 const Thankyou = () => {
@@ -14,10 +14,16 @@ const Thankyou = () => {
   }, [navigate]);
 
   return (
-    <div className='h-screen flex justify-center items-center'>
-      {/* <img src={tku} alt="Page Not Found" className='w-200 h-200 rounded-4xl object-contain'/> */}
-      Thankyou
-      <p className="mt-4 text-gray-600">Redirecting to homepage...</p>
+    <div className="about-me-body flex flex-col items-center justify-center min-h-screen py-[10%]">
+      <h1 className="text-3xl font-bold mb-6">Thank You!</h1>
+      <video
+        src={thanku}
+        autoPlay
+        loop
+        muted
+        className="w-[30%] h-[30%] object-cover"
+      />
+      <p className="mt-4 text-gray-300">Redirecting to homepage...</p>
     </div>
   )
 }

@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Contact = () => {
-  const [formData, setFormData] = useState ({
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
     email: "",
@@ -10,25 +11,25 @@ const Contact = () => {
     message: "",
   });
 
-  const [status, setStatus] = useState (null);
-  const navigate = useNavigate();
+  const [status, setStatus] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  const handleChange = (e) => { 
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
+    setStatus("");
 
-    // Prepare data for Staticforms API
     const data = {
-      accessKey: "sf_jgehi1h0iiiae3emh9g3ideh", // Replace with your actual key
-      name: `${formData.firstName} ${formData.lastName}`,
-      email: formData.email,
-      subject: formData.subject,
-      message: formData.message,
-      // Optional: you can add redirect URL or other fields here
-      // redirectTo: "https://your-site.com/thank-you",
+      accessKey: import.meta.env.VITE_STATICFORMS_KEY,
+      name: `${formData.firstName.trim()} ${formData.lastName.trim()}`,
+      email: formData.email.trim(),
+      subject: formData.subject.trim(),
+      message: formData.message.trim(),
     };
 
     try {
@@ -38,32 +39,29 @@ const Contact = () => {
         body: JSON.stringify(data),
       });
 
-      if (response.ok) {
-        setStatus("Message sent successfully!");
-        setFormData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          subject: "",
-          message: "",
-        });
+      if (!response.ok) throw new Error("Submission Failed");
 
-        setTimeout(() => {
-          navigate("/thankyou");
-        }, 1000);
+      setStatus("Message sent successfully");
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
 
-      } else {
-        setStatus("Failed to send message.");
-      }
+      setTimeout(() => navigate("/thankyou"), 1200);
+
     } catch (err) {
-      console.error(err);
-      setStatus("Something went wrong.");
+      setStatus("Something went wrong., Please try again");
+    } finally{
+      setLoading(false);
     }
   };
 
   return (
-    <section className="px-5 py-20 pb-20 sm:px-10 md:px-20 lg:px-24 text-white">
-      <h1 className="text-3xl sm:text-4xl text-center font-bold mb-10 orbitron">
+    <section className="certificates-body px-5 py-[20vh] sm:px-10 md:px-20 lg:px-24 text-white">
+      <h1 className="text-3xl sm:text-5xl text-center font-mono mb-10 orbitron">
         Say Hello
       </h1>
 
@@ -118,16 +116,17 @@ const Contact = () => {
           required
         />
 
-<div className="w-full p-0.5 bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 text-white rounded-2xl font-semibold hover:opacity-90 transition"
+        <div className="w-full p-0.5 bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 text-white rounded-2xl font-semibold hover:opacity-90 transition"
         >
-  
-        <button
-          type="submit"
-          className="w-full py-3 card rounded-2xl font-semibold hover:opacity-90 transition"
-        >
-          Send Message
-        </button>
-</div>
+
+          <button
+            type="submit"
+            disabled={loading}
+            className="w-full py-3 card rounded-2xl font-semibold hover:opacity-90 transition"
+          >
+            {loading ? "Sending..." : "Send Message"}
+          </button>
+        </div>
 
         {status && (
           <p className="text-center text-sm mt-2">{status}</p>

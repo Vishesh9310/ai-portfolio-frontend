@@ -31,8 +31,8 @@ const Certificates = () => {
   if (error) return <p>{error}</p>;
 
   return (
-    <>
-      <h2 className="block text-cyan-300 tracking-widest uppercase text-2xl sm:text-4xl md:text-5xl font-bold mb-4 text-center p-20">
+    <div className='certificates-body'>
+      <h2 className="block font-bold bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 text-transparent bg-clip-text w-fit mx-auto tracking-widest uppercase text-2xl sm:text-4xl md:text-5xl font-bold mb-4 py-20 h-[50vh] content-center">
         All Certificates
       </h2>
 
@@ -42,7 +42,7 @@ const Certificates = () => {
         ))}
       </div>
       <ScrollToTop />
-    </>
+    </div>
   )
 }
 

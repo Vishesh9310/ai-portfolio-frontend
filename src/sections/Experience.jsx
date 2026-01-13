@@ -54,10 +54,10 @@ const Experience = () => {
 
 
     return (
-        <div className="min-h-fit py-12 px-6">
+        <div id="educations" className="min-h-fit py-12 px-6 skills-body">
             {/* Header */}
             <div className="flex justify-between items-center max-w-4xl mx-auto mb-12">
-                <h1 className="text-3xl font-bold orbitron lg:text-5xl">
+                <h1 className="experience-text text-3xl font-bold orbitron lg:text-5xl">
                     Experience & Education
                 </h1>
             </div>

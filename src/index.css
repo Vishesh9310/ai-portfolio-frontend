@@ -1,34 +1,78 @@
 @import "tailwindcss";
 
+*{
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+}
+/* slate-900: 0f172a 
+  gray-200: e5e7eb;
+  gray-700: 374151;
+*/
 :root {
-  --bg: #c2a7e6;
-  --text: #111111;
-  --footer-bg: #a083c6;
-  --footer-text: black;
+  --bg-color: white;
+  --text-color: #213547;
+  --primary-color: #242424;
+  --secondary-color: #64748b;
+  --service-bg: linear-gradient(to right, rgb(176, 176, 250),white, rgb(176, 176, 250));
+  --font-size-lg: 16px;
+  --card-bg: linear-gradient(to right, #cda1f7, #a3c3f6, #5edbf0);
+  --code-box-bg: #38383b;
+  --code-box-text: rgb(88, 199, 239) ;
+  --aboutme-bg: rgb(190, 182, 242);
+  --text-main-text: #718096;
+  --footer-bg: #e2e8f0;
+  --footer-text: #1f2937;
+  --experience-text: #374151;
+  --skills-bg: linear-gradient(to right, #cda1f7, #a3c3f6, #5edbf0);
+  --projects-bg: linear-gradient(to right, rgb(176, 176, 250),white, rgb(176, 176, 250));
+  --certificates-bg: linear-gradient(to right, white, #d0a6f2, white);
+  --certificate-bg: white;
+  --achievement-bg: white;
+  --blogs-bg: linear-gradient(to right, #eedcfe, #a3c3f6, #eedcfe);
+  --blog-bg: white;
+  --blog-box-bg: white;
+  --blog-box-text: black;
 }
 
-[data-theme="dark"] {
-  --bg: #0f172a;
-  --text: #e5e7eb;
-  --footer-bg: #020617;
-  --footer-text: #E2E8F0;
+[data-theme="dark"]{
+  --service-bg: linear-gradient(to right, #000000, #111827, #000000);
+  --bg-color: #242424;
+  --text-color: white;
+  --card-bg: 0f172a;
+  --code-box-bg: #1b1b1c;
+  --code-box-text: rgb(184, 184, 11) ;
+  --aboutme-bg: linear-gradient(to right, #000000, #111827, #000000);
+  --text-main-text: #9ca3af;
+  --footer-bg: #111827;
+  --footer-text: white;
+  --experience-text: #e5e7eb;
+  --skills-bg: #020617;
+  --projects-bg: linear-gradient(to left, #000000, #111827, #000000);
+  --certificates-bg: linear-gradient(to right, black, #21033A, black);
+  --certificate-bg: #020617;
+  --achievement-bg: #0e0115;
+  --blogs-bg: linear-gradient(to bottom right, black, #1a202c, black);
+  --blog-bg: linear-gradient(to right, #06b6d4, #9333ea);
+  --blog-box-bg: black;
+  --blog-box-text: white;
 }
 
+/*Default light mode*/
 body {
-  background: var(--bg);
-  color: var(--text);
-  transition: 0.3s ease;
+  margin: 0px;
+  padding: 0px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.orbitron{
+  font-family: 'Orbitron', sans-serif;
 }
 
 .card{
   background: var(--bg);
   color: var(--text);
-  transition: 0.3s ease;
-}
-
-.footer{
-  background: var(--footer-bg);
-  color: var(--footer-text);
   transition: 0.3s ease;
 }
 
@@ -57,4 +101,64 @@ body {
   animation-delay: 0.4s;
 }
 
+.experience-text{
+  color: var(--experience-text);
+}
 
+.skills-body{
+  background: var(--skills-bg);
+  color: var(--text-color);
+}
+
+.service-body{
+  background: var(--service-bg);
+  color: var(--text-color);
+}
+
+.projects-body{
+  background: var(--projects-bg);
+}
+
+.project-body{
+  background: var(--aboutme-bg);
+}
+
+.certificates-body{
+  background: var(--certificates-bg);
+}
+
+.certificate-main{
+  background: var(--certificate-bg);
+}
+
+.achievement-bg{
+  background: var(--achievement-bg);
+}
+
+.about-me-body{
+  background: var(--aboutme-bg);
+}
+
+.box{
+  background: var(--card-bg);
+  color: var(--text-color);
+}
+
+.code-box{
+  background-color: var(--code-box-bg);
+  color: var(--code-box-text);
+}
+
+.blog-box{
+  background-color: var(--blog-box-bg);
+  color: var(--blog-box-text);
+}
+
+.text-main{
+  color: var(--text-main-text);
+}
+
+.footer{
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+}

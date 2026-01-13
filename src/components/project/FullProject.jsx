@@ -40,64 +40,66 @@ const FullProject = () => {
   }
 
   return (
-    <div className="pt-24 px-4 max-w-6xl mx-auto space-y-8 pb-10">
-      {/* Title */}
-      <div>
-        <h1 className="text-3xl font-bold text-purple-600">
-          {project.title}
-        </h1>
-        <p className="text-gray-400">
-          Tech Stack: {project.tech.join(", ")}
-        </p>
-      </div>
-
-      {/* Main Image */}
-      <div className="space-y-6">
-        <img
-          src={`${BASE_URL}${project.img.src}`}
-          alt={project.img.alt}
-          className="w-full rounded-xl object-cover"
-        />
-
-        {/* Gallery */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-          {project.imageList.map((image) => (
-            <img
-              key={image.id}
-              src={`${BASE_URL}${image.src}`}
-              alt={image.alt}
-              className="h-40 w-full object-cover rounded-lg"
-            />
-          ))}
+    <div className="project-body h-fit">
+      <div className="pt-24 px-4 max-w-6xl mx-auto space-y-8 pb-10 ">
+        {/* Title */}
+        <div>
+          <h1 className="text-3xl font-bold text-purple-600">
+            {project.title}
+          </h1>
+          <p className="text-gray-400">
+            Tech Stack: {project.tech.join(", ")}
+          </p>
         </div>
-      </div>
 
-      {/* Description */}
-      <p className="text-center text-purple-400">
-        {project.description}
-      </p>
+        {/* Main Image */}
+        <div className="space-y-6">
+          <img
+            src={`${BASE_URL}${project.img.src}`}
+            alt={project.img.alt}
+            className="w-full rounded-xl object-cover"
+          />
 
-      {/* Buttons */}
-      <div className="flex justify-center gap-6">
-        <a
-          href={project.github}
-          target="_blank"
-          className="px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold"
-        >
-          View Code
-        </a>
+          {/* Gallery */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            {project.imageList.map((image) => (
+              <img
+                key={image.id}
+                src={`${BASE_URL}${image.src}`}
+                alt={image.alt}
+                className="h-40 w-full object-cover rounded-lg"
+              />
+            ))}
+          </div>
+        </div>
 
-        {project.live && (
+        {/* Description */}
+        <p className="text-center text-purple-400">
+          {project.description}
+        </p>
+
+        {/* Buttons */}
+        <div className="flex justify-center gap-6">
           <a
-            href={project.live}
+            href={project.github}
             target="_blank"
-            className="px-6 py-3 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold"
+            className="px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold"
           >
-            Live Preview
+            View Code
           </a>
-        )}
-      </div>
 
+          {project.live && (
+            <a
+              href={project.live}
+              target="_blank"
+              className="px-6 py-3 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold"
+            >
+              Live Preview
+            </a>
+          )}
+        </div>
+
+      </div>
       <ScrollToTop />
     </div>
   );

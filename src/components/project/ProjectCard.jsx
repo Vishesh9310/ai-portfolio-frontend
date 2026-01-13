@@ -14,8 +14,9 @@ const ProjectCard = ({ project }) => {
                         <p className="orbitron text-sm">{project.date}</p>
                     </div>
                 </NavLink>
-                <div className='text-center w-full pb-4 mx-auto'>
+                <div className='text-center w-full pb-4 flex justify-between px-4 gap-5'>
                     <a href={project.codebtn} target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 py-2 px-10 rounded-full text-center w-full">Code</a>
+                    <a href={project.codebtn} target="_blank" rel="noopener noreferrer" className="bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 py-2 px-10 rounded-full text-center w-full">Preview</a>
                 </div>
             </div>
         </div>

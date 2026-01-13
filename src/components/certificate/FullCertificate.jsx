@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import ScrollToTop from "../common/ScrollToTop"
 import { fetchCertificates } from "../../services/certificate.api"
@@ -39,26 +39,28 @@ const FullCertificate = () => {
   }
 
   return (
-    <div className="pt-24 px-4 max-w-5xl mx-auto space-y-8 pb-10">
-      <h1 className="text-3xl font-bold text-purple-600">
-        {certificate.name}
-      </h1>
+    <div className="certificates-body h-fit">
+      <div className="pt-24 px-4 max-w-5xl mx-auto space-y-8 pb-10">
+        <h1 className="text-3xl font-bold text-purple-600">
+          {certificate.name}
+        </h1>
 
-      <img
-        src={`${BASE_URL}${certificate.img}`}
-        alt={certificate.img.alt}
-        className="w-full rounded-xl"
-      />
+        <img
+          src={`${BASE_URL}${certificate.img}`}
+          alt={certificate.name}
+          className="w-full rounded-xl"
+        />
 
-      <p className="text-center text-purple-400">
-        {certificate.desc}
-      </p>
+        <p className="text-center text-purple-400">
+          {certificate.desc}
+        </p>
 
-      <p className="text-center text-gray-400">
-        {certificate.date}
-      </p>
+        <p className="text-center text-gray-400">
+          {certificate.date}
+        </p>
 
-      <ScrollToTop />
+        <ScrollToTop />
+      </div>
     </div>
   )
 }

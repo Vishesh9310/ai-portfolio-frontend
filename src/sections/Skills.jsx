@@ -10,16 +10,17 @@ const Skills = () => {
         { heading: 'Algorithms & Problem Solving', skills: ['DSA', 'OOPs', 'Analytical Thinking', 'Responsive Web Design'] },
     ]
     return (
-        <section className="relative w-full py-24 px-4 text-white overflow-hidden">
+        <section className="skills-body relative w-full py-24 px-4 text-white overflow-hidden">
 
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[140px]" />
+            <div id="skills" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[140px]" />
             <div className="relative max-w-6xl mx-auto">
 
                 {/* Heading */}
-                <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-3xl md:text-4xl font-bold mb-14 text-center">
-                    Skills & <span className="text-blue-400">Expertise</span>
+                <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-3xl md:text-4xl font-bold text-center bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 text-transparent bg-clip-text w-fit mx-auto">
+                    Skills & Expertise
                 </motion.h2>
-
+                <p className="mb-14 w-full text-center pt-2 italic">Crafting responsive websites and dynamic web apps with modern technologies. Let's build something amazing together!</p>
+                
                 {/* Cards */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                     {skillsdata.map((item, index) => (

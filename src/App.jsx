@@ -11,6 +11,8 @@ import Thankyou from './pages/Thankyou'
 import FullCertificate from './components/certificate/FullCertificate'
 import Certificates from './pages/Certificates'
 import ChatWidget from './components/chatbot/ChatWidget'
+import Achievements from './pages/Achievements'
+import AchievementFull from './components/achievement/AchievementFull'
 
 const App = () => {
 
@@ -31,6 +33,8 @@ const App = () => {
             <Route path='/projects/:id' element={<FullProject />} />
             <Route path='/certificates' element={<Certificates/>}/>
             <Route path='/certificates/:id' element={<FullCertificate />} />
+            <Route path='/achievement' element={<Achievements/>}/>
+            <Route path='/achievement/:id' element={<AchievementFull/>}/>
             <Route path='/contact' element={<Contact />} />
             <Route path='/thankyou' element={<Thankyou/>}/>
             <Route path='*' element={<NotFound />} />

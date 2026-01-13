@@ -1,38 +1,20 @@
-import React from "react";
-import profileImg from "../assets/vishesh.jpeg";
-
 const About = () => {
     return (
-        <section className="w-full py-20 px-4 text-white">
+        <section className="w-full py-20 px-4 about-me-body">
             <div className="w-auto h-fit p-0.5 space-y-5 m-5 sm:m-5 lg:m-20 rounded-2xl bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500">
                 <div id="about" className="about-me-body h-fit p-6 sm:p-10 space-y-5 rounded-2xl w-auto card">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                        About <span className="text-cyan-500">Me</span>
-                    </h2>
+                    <h2 className="text-2xl md:text-3xl font-bold mb-6">About Me:</h2>
 
                     {/* Responsive Container */}
-                    <div className="flex flex-col lg:flex-row justify-between gap-10">
-                        <div className="text-base sm:text-lg leading-relaxed lg:w-2/3">
-                            <p> I am an aspiring Full-Stack Developer and BCA undergraduate with a strong focus on building responsive, user-friendly web applications. </p>
-                            <p> I have a solid foundation in Data Structures, Algorithms, C, and C++, which enables me to write efficient and reliable code. </p>
-                            <p> My expertise lies in the MERN stack, particularly React.js for frontend development styled with Tailwind CSS, and Node.js for backend services, working with both MongoDB and MySQL databases. </p>
-                            <p> I enjoy solving real-world problems and transforming ideas into complete digital products. </p>
-                            <p> My goal is to write clean, scalable, and performance-optimized code while continuously learning modern technologies and contributing to impactful projects.</p>
-                        </div>
-
-
-                        {/* Right Code Block */}
-                        <div className="w-64 h-64 rounded-3xl overflow-hidden border border-slate-700">
-                            <img
-                                src={profileImg}
-                                alt="Vishesh profile"
-                                className="w-full h-full object-cover"
-                            />
-                        </div>
-
+                    <div className="text-base sm:text-lg leading-relaxed ">
+                        <p> I am an aspiring Full-Stack Developer and BCA undergraduate with a strong focus on building responsive, user-friendly web applications. </p>
+                        <p> I have a solid foundation in Data Structures, Algorithms, C, and C++, which enables me to write efficient and reliable code. </p>
+                        <p> My expertise lies in the MERN stack, particularly React.js for frontend development styled with Tailwind CSS, and Node.js for backend services, working with both MongoDB and MySQL databases. </p>
+                        <p> I enjoy solving real-world problems and transforming ideas into complete digital products. </p>
+                        <p> My goal is to write clean, scalable, and performance-optimized code while continuously learning modern technologies and contributing to impactful projects.</p>
                     </div>
 
-                    <div className="code-box p-4 sm:p-6 rounded-xl shadow-lg text-xs sm:text-sm font-mono w-full border border-gray-700 overflow-x-auto">
+                    <div className="bg-slate-800 text-yellow-400 code-box p-4 sm:p-6 rounded-xl shadow-lg text-xs sm:text-sm font-mono w-full border border-gray-700 overflow-x-auto">
                         <pre className="whitespace-pre-wrap">
                             {`const developer = {
   name: "Vishesh",

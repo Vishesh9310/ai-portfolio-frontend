@@ -29,7 +29,7 @@ const Projects = () => {
   if (error) return <p>{error}</p>;
 
   return (
-    <>
+    <div className='projects-body'>
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <div className="w-[320px] md:w-[520px] h-[320px] md:h-[520px] bg-blue-600/20 rounded-full blur-[120px]" />
       </div>
@@ -46,7 +46,7 @@ const Projects = () => {
         ))}
       </div>
       <ScrollToTop />
-    </>
+    </div>
   )
 }
 
