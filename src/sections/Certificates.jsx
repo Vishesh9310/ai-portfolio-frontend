@@ -34,7 +34,7 @@ const Certificates = () => {
   return (
     <div className='h-fit py-10 projects-body'>
       <h2 id="certifications" className="text-3xl sm:text-4xl text-center font-bold orbitron bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 bg-clip-text text-transparent mb-10">Certificates</h2>
-      <div className='flex justify-between px-24 orbitron mb-10'>
+      <div className='flex justify-between px-[10%] orbitron mb-10'>
         <h2 className="text-2xl font-bold">Top Three Certificates</h2>
         <Link to='/certificates' className='text-xl'>Show More</Link>
       </div>

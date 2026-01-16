@@ -11,64 +11,66 @@ import tradefairimg4 from "../../assets/achievement/tradefair/Screenshot_2025-09
 import tv9img1 from "../../assets/achievement/tv9/IMG20250328151127.jpg"
 import volunteerimg1 from "../../assets/achievement/volunteer/volunteer.jpeg"
 
+const collegeAchievementData = [
+    { id: 1, name: "Class Representative", img: crshirt, desc: "Class Representative", about: "Elected as Class Representative to act as a bridge between students and faculty. Managed academic coordination, addressed student concerns, and helped organize class-level activities.", date: "Dec 2024" },
+    { id: 2, name: "Hackathon", img: hackathonimg1, desc: "Hackathon participation", about: "Participated in a competitive hackathon where I collaborated with a team to design and develop a real-world problem solution under strict time constraints, enhancing teamwork and problem-solving skills.", date: "2024" },
+    { id: 3, name: "Technia", img: techniaimg3, desc: "Technia Event", about: "Actively participated in Technia college fest, engaging in technical events that improved my analytical thinking, innovation mindset, and exposure to emerging technologies.", date: "2025" },
+    { id: 4, name: "Technia", img: techniaimg4, desc: "Technia Achievement", about: "Recognized for outstanding performance during Technia by contributing to technical activities and demonstrating leadership, coordination, and technical aptitude.", date: "2025" },
+    { id: 5, name: "Technia", img: techniaimg6, desc: "Techovation", about: "Participated in the Techovation segment of Technia, where innovative ideas were presented and evaluated, encouraging creativity, teamwork, and practical problem-solving.", date: "2025" },
+    { id: 6, name: "Technia", img: techniaimg7, desc: "Techovation Trophy", about: "Awarded the Techovation Trophy at Technia for excellence in innovation and technical execution, reflecting strong conceptual understanding and collaborative effort.", date: "2025" },
+    { id: 7, name: "Tradefair", img: tradefairimg4, desc: "Trade Fair", about: "Participated in a trade fair showcasing ideas and projects, gaining practical exposure to presentation skills, market understanding, and real-world applications.", date: "2024" },
+    { id: 8, name: "TV9", img: tv9img1, desc: "TV9 Coverage", about: "Featured in TV9 media coverage for participation in a college or technical event, highlighting achievements and contributing to institutional recognition.", date: "2025" },
+    { id: 9, name: "Volunteer", img: volunteerimg1, desc: "Volunteer Work", about: "Volunteered in college and social activities, assisting in event management and community initiatives, developing leadership, empathy, and organizational skills.", date: "2024" },
+]
+
 const AchievementFull = () => {
     const { id } = useParams()
     const [achievement, setAchievement] = useState(null)
 
-    const collegeAchievementData = [
-        { id: 1, name: "Class Representative", img: crshirt, desc: "Class Representative", date: "Dec 2024" },
-        { id: 2, name: "Hackathon", img: hackathonimg1, desc: "", date: "" },
-        { id: 3, name: "Technia", img: techniaimg3, desc: "", date: "" },
-        { id: 4, name: "Technia", img: techniaimg4, desc: "", date: "" },
-        { id: 5, name: "Technia", img: techniaimg6, desc: "", date: "" },
-        { id: 6, name: "Technia", img: techniaimg7, desc: "", date: "" },
-        { id: 7, name: "Tradefair", img: tradefairimg4, desc: "", date: "" },
-        { id: 8, name: "TV9", img: tv9img1, desc: "", date: "" },
-        { id: 9, name: "Volunteer", img: volunteerimg1, desc: "", date: "" },
-    ]
-
     useEffect(() => {
-        const foundAchievement = collegeAchievementData.find(
-            item => item.id === Number(id)
-        )
-        setAchievement(foundAchievement || null)
+        setAchievement(collegeAchievementData.find(item => item.id === Number(id)) || null)
     }, [id])
 
     if (!achievement) {
         return (
-            <div className="pt-24 text-center text-red-500 text-xl">
+            <div className="min-h-screen flex items-center justify-center text-red-500 text-xl">
                 Achievement not found
             </div>
         )
     }
 
     return (
-        <div className="about-me-body">
-            <div className="pt-24 px-4 max-w-5xl mx-auto space-y-6">
-                <h1 className="text-3xl text-center font-bold text-purple-600">
+        <section className="min-h-screen py-24 px-4 about-me-body">
+            <div className="max-w-5xl mx-auto space-y-6">
+
+                <h1 className="text-2xl sm:text-3xl font-bold text-center text-purple-500">
                     {achievement.name}
                 </h1>
 
-                <div className="w-full flex justify-between">
-                    <p className="text-gray-300 text-center text-lg">
+                <div className="flex flex-col sm:flex-row sm:justify-between gap-2 text-center sm:text-left">
+                    <p className="text-gray-300 text-base sm:text-lg">
                         {achievement.desc}
                     </p>
-
-                    <p className="text-gray-400 text-center">
+                    <p className="text-gray-400 text-sm sm:text-base">
                         {achievement.date}
                     </p>
                 </div>
 
-                <div className="max-w-4xl mx-auto">
+                <div className="w-full flex justify-center">
                     <img
                         src={achievement.img}
                         alt={achievement.name}
-                        className="w-full rounded-xl object-contain"
+                        className="w-full max-w-4xl rounded-xl object-contain shadow-lg"
                     />
                 </div>
+
+                <p className="text-gray-300 text-base sm:text-lg">
+                    {achievement.about}
+                </p>
+
             </div>
-        </div>
+        </section>
     )
 }
 
-export default AchievementFull
+export default AchievementFull;
