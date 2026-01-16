@@ -6,7 +6,7 @@ const About = () => {
                     <h2 className="text-2xl md:text-3xl font-bold mb-6">About Me:</h2>
 
                     {/* Responsive Container */}
-                    <div className="text-base sm:text-lg leading-relaxed ">
+                    <div className="text-base sm:text-lg leading-relaxed space-y-3">
                         <p> I am an aspiring Full-Stack Developer and BCA undergraduate with a strong focus on building responsive, user-friendly web applications. </p>
                         <p> I have a solid foundation in Data Structures, Algorithms, C, and C++, which enables me to write efficient and reliable code. </p>
                         <p> My expertise lies in the MERN stack, particularly React.js for frontend development styled with Tailwind CSS, and Node.js for backend services, working with both MongoDB and MySQL databases. </p>

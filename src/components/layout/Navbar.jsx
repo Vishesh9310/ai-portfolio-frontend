@@ -107,6 +107,19 @@ const Navbar = () => {
           <NavLink to="/" onClick={() => setIsOpen(false)}>
             Home
           </NavLink>
+          {["about", "skills", "certifications", "educations"].map((section) => (
+            <li key={section}>
+              <a
+                href={`#${section}`}
+                onClick={(e) => handleNavClick(e, section)}
+                className="hover:text-violet-600"
+              >
+                {section.charAt(0).toUpperCase() + section.slice(1)}
+              </a>
+            </li>
+          ))}<NavLink to="/achievement" onClick={() => setIsOpen(false)}>
+            Achievements
+          </NavLink>
           <NavLink to="/project" onClick={() => setIsOpen(false)}>
             Projects
           </NavLink>

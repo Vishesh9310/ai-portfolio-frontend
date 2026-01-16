@@ -42,12 +42,18 @@ const FullProject = () => {
   return (
     <div className="project-body h-fit">
       <div className="pt-24 px-4 max-w-6xl mx-auto space-y-8 pb-10 ">
+
         {/* Title */}
         <div>
           <h1 className="text-3xl font-bold text-purple-600">
             {project.title}
           </h1>
-          <p className="text-gray-400">
+
+          <div className="flex justify-between">
+            <h3 className="text-lg text-gray-300">{project.status} Project</h3>
+            <h3 className="italic text-lg">{project.date}</h3>
+          </div>
+          <p className="text-gray-300">
             Tech Stack: {project.tech.join(", ")}
           </p>
         </div>
@@ -73,32 +79,40 @@ const FullProject = () => {
           </div>
         </div>
 
-        {/* Description */}
-        <p className="text-center text-purple-400">
-          {project.description}
-        </p>
+        {/* Heading & Description */}
+        <div className="text-center space-y-4">
+          <h1 className="text-2xl sm:text-4xl font-bold text-purple-600">
+            {project.title}
+          </h1>
+          <h3 className="text-lg text-purple-500 text-left">{project.description}</h3>
+          <div className="leading-relaxed space-y-2 text-left">
+            {Array.isArray(project.about)
+              ? project.about.map((line, index) => (
+                <p key={index}>{line}</p>
+              ))
+              : <p>{project.about}</p>}
+          </div>
+        </div>
 
-        {/* Buttons */}
-        <div className="flex justify-center gap-6">
+        {/* Action Buttons */}
+        <div className="flex flex-col sm:flex-row justify-center sm:justify-evenly gap-4">
           <a
             href={project.github}
             target="_blank"
-            className="px-6 py-3 rounded-full bg-gradient-to-r from-purple-500 to-cyan-500 text-white font-semibold"
+            rel="noopener noreferrer"
+            className="bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 py-3 px-6 rounded-full text-white font-semibold text-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl"
           >
             View Code
           </a>
-
-          {project.live && (
-            <a
+          {project.live && project.live != project.codebtn
+            && (<a
               href={project.live}
               target="_blank"
-              className="px-6 py-3 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-semibold"
-            >
-              Live Preview
-            </a>
-          )}
+              rel="noopener noreferrer"
+              className="bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 py-3 px-6 rounded-full text-white font-semibold text-lg shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl"
+            >Live Preview</a>)
+          }
         </div>
-
       </div>
       <ScrollToTop />
     </div>

@@ -2,10 +2,12 @@ import w3icon from '../assets/socialmedia/w3school1.png';
 import hricon from '../assets/socialmedia/hackerrank1.png';
 import nsicon from '../assets/socialmedia/newtonschool1.png';
 import lcicon from '../assets/socialmedia/leetcode.png';
+import cnicon from '../assets/socialmedia/codingninjas.png';
 
 const ProblemSol = () => {
   const problemSolvingData = [
     { img: lcicon, heading: 'LeetCode', link: 'https://leetcode.com/u/Vishesh9310/' },
+    { img: cnicon, heading: 'Coding Ninjas', link: 'https://www.naukri.com/code360/profile/Vishesh9310'},
     { img: hricon, heading: 'HackerRank', link: 'https://www.hackerrank.com/profile/Vishesh9310' },
     { img: w3icon, heading: 'W3schools', link: 'https://www.w3profile.com/Vishesh' },
     { img: nsicon, heading: 'Newton Schools', link: 'https://my.newtonschool.co/user/vk866797' },
