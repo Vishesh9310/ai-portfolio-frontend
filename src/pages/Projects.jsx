@@ -31,12 +31,12 @@ const Projects = () => {
   return (
     <div className='projects-body'>
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-        <div className="w-[320px] md:w-[520px] h-[320px] md:h-[520px] bg-blue-600/20 rounded-full blur-[120px]" />
+        <div className="w-[320px] md:w-[520px] h-[50vh] bg-blue-600/20 rounded-full blur-[120px]" />
       </div>
 
-      <div className="flex justify-center items-center h-screen z-10 text-center max-w-4xl mx-auto">
+      <div className="flex justify-center items-center h-[50vh] z-10 text-center max-w-4xl mx-auto">
         <span className="block text-cyan-300 tracking-widest uppercase text-2xl sm:text-4xl md:text-5xl font-bold mb-4">
-          Projects
+          My Projects
         </span>
       </div>
 

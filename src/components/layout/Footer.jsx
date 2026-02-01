@@ -45,7 +45,7 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="mt-10 text-center text-xs text-gray-500 border-t border-gray-700 pt-4">
-        © 2025 Vishesh. All rights reserved. | Designed & built by Vishesh.
+        © 2026 Vishesh. All rights reserved. | Designed & built by Vishesh.
       </div>
     </footer>
   );

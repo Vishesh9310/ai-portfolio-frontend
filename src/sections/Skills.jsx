@@ -17,7 +17,7 @@ const Skills = () => {
 
                 {/* Heading */}
                 <motion.h2 initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} viewport={{ once: true }} className="text-3xl md:text-4xl font-bold text-center bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 text-transparent bg-clip-text w-fit mx-auto">
-                    Skills & Expertise
+                   My Skills & Expertise
                 </motion.h2>
                 <p className="mb-14 w-full text-center pt-2 italic">Crafting responsive websites and dynamic web apps with modern technologies. Let's build something amazing together!</p>
                 

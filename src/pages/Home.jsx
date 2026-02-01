@@ -17,8 +17,8 @@ const Home = () => {
             <About />
             <Projects />
             <Skills />
-            <Certificates/>
             <Experience/>
+            <Certificates/>
             <ProblemSol/>
             <WhyHireMe/>
             <ScrollToTop/>

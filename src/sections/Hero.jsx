@@ -95,7 +95,7 @@ const Hero = () => {
           </div>
         </div>
         <div className='lg:w-1/2 sm:w-full lg:content-center sm:py-10 lg:pt-30'>
-          <img src={logo} alt="full stack developer" className="w-[300px] md:w-[500px] lg:w-[450px] xl:w-[500px] rounded-4xl object-cover sm:mx-auto" />
+          <img src={logo} alt="full stack developer" className="w-[250px] h-[380px] md:w-[300px] md:h-[450px] lg:w-[280px] lg:h-[420px] xl:w-[300px] xl:h-[460px] oval object-cover  sm:mx-auto" />
         </div>
       </div>
 

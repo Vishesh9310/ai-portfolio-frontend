@@ -162,3 +162,7 @@ body {
   background-color: var(--footer-bg);
   color: var(--footer-text);
 }
+
+.oval {
+  border-radius: 50% / 50%;  /* makes it oval */
+}

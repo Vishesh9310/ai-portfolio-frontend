@@ -8,11 +8,23 @@ const ProjectCard = ({ project }) => {
             <div className="project-body h-full w-full card rounded-2xl overflow-hidden flex flex-col">
                 <NavLink to={`/projects/${project.id}`} >
                     <img src={`${BASE_URL}${project.img.src}`} alt={project.img.alt} className="h-52 w-full object-cover" />
-                    <div className="p-4 flex-1 space-y-2">
-                        <h3 className="text-center font-bold italic text-lg orbitron">{project.title}</h3>
-                        <p className="text-sm text-blue-500">{project.description}</p>
-                        <p className="orbitron text-sm italic">Tech Stack: {project.tech}</p>
-                        <p className="orbitron text-sm">Date: {project.date}</p>
+                    <div className="p-4 flex-1 flex flex-col space-y-2">
+                        <h3 className="text-center font-bold text-2xl orbitron">{project.title}</h3>
+                        <p className="text-sm px-2 py-1 rounded-full bg-gray-700/70 text-slate-300 w-fit">
+                            {project.status}
+                        </p>
+                        <p className="text-sm">{project.description}</p>
+                        <div className="flex flex-wrap gap-2">
+                            {project.tech.map((skill, idx) => (
+                                <span
+                                    key={idx}
+                                    className="text-xs px-3 py-1 rounded-full bg-gray-700/70 text-slate-300 hover:bg-blue-500/20 hover:text-blue-300 transition"
+                                >
+                                    {skill}
+                                </span>
+                            ))}
+                        </div>
+                        <p className="orbitron text-sm">{project.date}</p>
                     </div>
                 </NavLink>
                 <div className='text-center w-full pb-4 flex justify-between px-4 gap-5'>
