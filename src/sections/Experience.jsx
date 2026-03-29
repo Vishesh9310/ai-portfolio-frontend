@@ -5,6 +5,12 @@ const Experience = () => {
     // Experience data
     const experience = [
         {
+            role: "SEO Intern",
+            company: "Tech World Digital Solutions",
+            duration: "Jan 2026 - Present",
+            description: "Assisted in SEO tasks including keyword research, on-page and off-page optimization, traffic analysis, and improving website performance using tools.",
+        },
+        {
             role: "Java Developer Intern",
             company: "Elevate Labs",
             duration: "June 2025 - July 2025",
