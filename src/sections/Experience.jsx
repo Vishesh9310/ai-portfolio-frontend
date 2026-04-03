@@ -8,7 +8,7 @@ const Experience = () => {
             role: "SEO Intern",
             company: "Tech World Digital Solutions",
             duration: "Jan 2026 - Present",
-            description: "Assisted in SEO tasks including keyword research, on-page and off-page optimization, traffic analysis, and improving website performance using tools.",
+            description: "Assisted in SEO tasks including keyword research, on-page and off-page optimization, Google Analytics, traffic analysis, and improving website performance using tools",
         },
         {
             role: "Java Developer Intern",
@@ -23,17 +23,17 @@ const Experience = () => {
             description: "Gained exposure to architecture, security, agile methodology, testing, and software development practices.",
         },
         {
-            role: "Full Stack Developer",
-            company: "Freelance",
+            role: "Full Stack Developer (Freelance)",
+            company: "Independent Projects",
             duration: "2024 - Present",
-            description: "Developed REST APIs with Spring Boot, integrated MySQL, and deployed apps using Docker & GitHub Actions.",
+            description: "Built MERN stack applications with React, Node.js, Express.js, MongoDB; created REST APIs, deployed apps with Vercle, Railways.",
         },
     ];
 
     // Education data
     const education = [
         {
-            degree: "BCA",
+            degree: "BCA (Computer Applications)",
             institution: "Avviare Educational Hub",
             duration: "2023 - Current",
             details: "Studying software development, programming, web technologies, databases, and real-world projects.",
@@ -54,7 +54,7 @@ const Experience = () => {
             degree: "10th",
             institution: "Shri Krishna Inter College",
             duration: "2017 - 2019",
-            details: "Built a strong academic foundation with core subjects, preparing for higher studies.",
+            details: "Built a solid academic foundation, preparing for higher studies in science and technology.",
         },
     ];
 

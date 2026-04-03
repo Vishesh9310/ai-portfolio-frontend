@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import ProjectCard from '../components/project/ProjectCard'
-import { fetchProjects } from '../services/project.api';
 import ScrollToTop from '../components/common/ScrollToTop';
 import CertificateCard from '../components/certificate/CertificateCard';
 import { fetchCertificates } from '../services/certificate.api';

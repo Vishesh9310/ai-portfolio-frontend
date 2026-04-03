@@ -42,7 +42,7 @@ const App = () => {
         </main>
 
         <Footer />
-        <ChatWidget />
+        {/* <ChatWidget /> */}
       </div>
     </BrowserRouter>
   )

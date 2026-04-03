@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import ProjectCard from '../components/project/ProjectCard'
-import { fetchProjects } from '../services/project.api';
+import React, { useState, useEffect } from 'react';
+import { fetchFeaturedProjects } from '../services/project.api';
 import { Link, NavLink } from 'react-router-dom';
 
 const Projects = () => {
@@ -13,7 +12,7 @@ const Projects = () => {
   useEffect(() => {
     const loadProjects = async () => {
       try {
-        const data = await fetchProjects();
+        const data = await fetchFeaturedProjects();
         setProjects(Array.isArray(data) ? data : []);
 
       } catch (err) {

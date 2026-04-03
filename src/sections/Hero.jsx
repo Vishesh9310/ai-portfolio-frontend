@@ -6,11 +6,11 @@ import logo from "../assets/vishesh.jpeg";
 import { Link, useLocation } from 'react-router-dom';
 import Vishesh_Resume from '../assets/resume/Vishesh_Resume.pdf'
 
-const words = ["BCA Undergraduate", "Problem Solver", "Open Source Enthusiast"];
+const words = ["BCA Undergraduate", "Problem Solver", "Data Analyst", "Full-Stack Developer"];
 
 const Hero = () => {
   const location = useLocation();
-  const sectionRef = useRef<HTMLDivElement | null>(null);
+  const sectionRef = useRef < HTMLDivElement | null > (null);
 
   useEffect(() => {
     if (sectionRef.current) {
@@ -68,7 +68,7 @@ const Hero = () => {
       <div className='lg:flex lg:justify-between'>
         <div className='font-bold space-y-4 w-full lg:w-2/3 lg:content-center text-center lg:text-left'>
           <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl">Hi,<br /> I'm <span className='text-main'>VISHESH</span></h2>
-          
+
           <motion.p
             className="text-xl md:text-3xl font-semibold h-10 mb-6  bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 bg-clip-text text-transparent"
             initial={{ opacity: 0 }}
@@ -79,9 +79,10 @@ const Hero = () => {
           </motion.p>
 
           <p className="text-2xl">
-          A <span className="text-cyan-200 font-semibold">Full Stack Developer</span> specializing in the MERN stack.
-          I build scalable web apps with clean code and great UX.
-        </p>
+            I am a <span className="text-cyan-200 font-semibold">Data Analyst & Full Stack Developer</span> with 
+            expertise in <b>SQL, Excel, Power BI, Python</b> and the <b>MERN stack</b>.
+            I build <b>scalable web applications</b> and <b>data-driven dashboards</b> that provide actionable insights.
+          </p>
 
           <div className="flex justify-center lg:justify-start space-x-6 text-main text-2xl">
             <a href="https://github.com/Vishesh9310" target="_blank" rel="noreferrer" className='hover:text-white'><FaGithub /></a>
