@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
 
-import logo from "../assets/vishesh.jpeg";
+import logo from "../assets/vishesh.png";
 import { Link, useLocation } from 'react-router-dom';
 import Vishesh_Resume from '../assets/resume/Vishesh_Resume.pdf'
 
