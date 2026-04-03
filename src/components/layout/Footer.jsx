@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer className="footer px-6 py-10">
       {/* Heading */}
-      <h1 className="text-center font-bold text-2xl md:text-3xl bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 text-transparent bg-clip-text">Let's collaborate — feel free to reach out!</h1>
+      <h1 className="text-center font-bold text-2xl md:text-3xl bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 text-transparent bg-clip-text"> Let's connect — I love collaborating on web & data projects!</h1>
       <hr className="h-0.5 border-0 rounded bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 my-10" />
 
       {/* Content Grid */}
@@ -15,8 +15,9 @@ const Footer = () => {
         {/* About Me */}
         <ul>
           <li className="text-lg pb-3 font-semibold text-cyan-400">About Me</li>
-          <li>Full-Stack Developer</li>
-          <li>Building responsive, high-performance web apps.</li>
+          <p>MERN Stack & Data Analyst Developer</p>
+          <p>Building data-driven, high-performance web applications and dashboards.</p>
+          <p>Passionate about clean code, automation, and data visualization.</p>
         </ul>
 
 
@@ -34,7 +35,7 @@ const Footer = () => {
 
         {/* Social Media */}
         <div>
-          <h3 className="text-lg font-semibold mb-2 bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 inline-block text-transparent bg-clip-text">Social Media / Developer Links</h3>
+          <h3 className="text-lg font-semibold mb-2 bg-gradient-to-r from-purple-500 via-blue-500 to-cyan-500 inline-block text-transparent bg-clip-text">Connect / Projects</h3>
           <div className="flex gap-5 mt-2">
             <a href="https://github.com/Vishesh9310" className='text-3xl' target="_blank" rel="noreferrer"><FaGithub /> </a>
             <a href="https://www.linkedin.com/in/vishesh-b8a2b72a3" className='text-3xl bg-white rounded-md text-blue-500' target="_blank" rel="noreferrer"><FaLinkedin /></a>
@@ -45,7 +46,7 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="mt-10 text-center text-xs text-gray-500 border-t border-gray-700 pt-4">
-        © 2026 Vishesh. All rights reserved. | Designed & built by Vishesh.
+        © 2026 Vishesh. All rights reserved. | Designed & built with MERN stack & Data Analytics.
       </div>
     </footer>
   );
