@@ -55,7 +55,7 @@ This project demonstrates modern web development practices, clean architecture, 
 
 project-root/
 │
-├── backend/
+├── ai-portfolio-backend/
 │   ├── server.js
 │   ├── routes/
 │   ├── models/
@@ -64,7 +64,7 @@ project-root/
 │   ├── package.json
 │   └── .env
 │
-├── frontend/
+├── ai-portfolio-frontend/
 │   ├── src/
 │   ├── public/
 │   ├── package.json
@@ -98,8 +98,8 @@ REACT_APP_API_URL=https://your-backend-url/api
 ### Clone Repository
 
 ```bash
-git clone https://github.com/Vishesh9310/VisheshPortfoliowithAiPersona.git
-cd your-repo-name
+git clone https://github.com/Vishesh9310/ai-portfolio-frontend.git
+cd ai-portfolio-frontend
 ```
 
 ### Backend Setup
@@ -142,8 +142,8 @@ npm run dev
 
 **Vishesh Chauhan**
 
-* GitHub: [https://github.com/your-username](https://github.com/Vishesh9310)
-* LinkedIn: [https://linkedin.com/in/your-profile](https://www.linkedin.com/in/vishesh9310/)
+* GitHub: https://github.com/Vishesh9310
+* LinkedIn: https://www.linkedin.com/in/vishesh9310/
 
 ---
 
